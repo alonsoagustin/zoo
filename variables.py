@@ -4,3 +4,5 @@ price_list = {
     'Adultos':{'precio': 23,'edad': 65,'contador': 0},
     'Jubilados':{'precio': 18,'edad': float('inf'),'contador': 0}
 }
+
+total = 0
