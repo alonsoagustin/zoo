@@ -1,3 +1,5 @@
+from functions import is_valid
+
 def test_is_valid():
     assert is_valid("1") == True
     assert is_valid("0") == True
