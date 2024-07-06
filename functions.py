@@ -7,3 +7,11 @@ def is_valid(user_response:str)->bool:
     except ValueError as e:
         print(f"Error: {e}. Por favor, ingrese una edad válida.")
         return False
+
+def request_age():
+    while True:
+        user_response = input("Ingrese una edad: ")
+        if user_response == "":
+            break
+        else:
+            is_valid(user_response)
