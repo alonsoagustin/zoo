@@ -37,11 +37,8 @@ def summary_to_pay(price_list:dict):
     global total
     for key, value in price_list.items():
         subtotal = value['contador'] * value['precio']
-        string = f'{value['contador']} entradas de {key}: ${subtotal:.2f}'
-        if value['contador'] == 1:
-            string = string.replace('entradas','entrada')
+        string = f'{value['contador']:02d} entradas de {key:.<20s}: ${subtotal:05.2f}'
         print(string)
-    print('-----------------')
+    line = '-'
+    print(line * 43)
     print(f'TOTAL: ${total:.2f}')
-
-calc_price()
