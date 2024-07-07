@@ -1,8 +1,8 @@
-# Zoo.
+# ZOO.
 
 ### Descripción
 
-Un programa realizado en Python que permite calcular el precio de la entrada al Zoo partiendo de una lista de precios determinada.
+Un programa realizado en Python que permite calcular el precio de la entrada al ZOO partiendo de una lista de precios determinada.
 
 ### Tabla de Contenidos
 
@@ -44,23 +44,23 @@ Introduce, una a una, la edad de las personas que deseen ingresar al ZOO.
 ### Input
 
 ```cmd
-Ingrese una edad: 2
-Ingrese una edad: 5
-Ingrese una edad: 33
-Ingrese una edad: 35
-Ingrese una edad: 67
 Ingrese una edad: 74
+Ingrese una edad: 2
+Ingrese una edad: 67
+Ingrese una edad: 35
+Ingrese una edad: 33
+Ingrese una edad:
 ```
 
 ### Output
 
 ```cmd
-1 entrada de Bebés: $0.00
-1 entrada de Niños: $14.00
-2 entradas de Adultos: $46.00
-2 entradas de Jubilados: $36.00
------------------
-TOTAL: $96.00
+01 entradas de Bebés...............: $00.00
+00 entradas de Niños...............: $00.00
+02 entradas de Adultos.............: $46.00
+02 entradas de Jubilados...........: $36.00
+-------------------------------------------
+TOTAL: $82.00
 ```
 
 ## Contribuciones
