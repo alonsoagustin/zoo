@@ -45,18 +45,19 @@ def summary_to_pay():
     age = True
     while age:
         y = 1
-        title = " RESUMEN DE COMPRA" 
+        line = '-'
+        title = "   TIPO              PRECIO       N°       TOTAL" 
         locate(0,0)
         Print(title)
         for key, value in price_list.items():
             subtotal = value['contador'] * value['precio']
-            string = f'{key:.<20s} {value['precio']:05.2f} ..... {value['contador']:02d} ..... €{subtotal:05.2f}'
+            string = f'{key:.<20s} €{value['precio']:05.2f} ..... {value['contador']:02d} ..... €{subtotal:05.2f}'
             locate(0,y)
             Print(string)
             y += 1
         line = '-'
         locate(0,5)
-        Print(line * 48)
+        Print(line * 49)
         locate(0,6)
         Print(f'TOTAL: €{total:05.2f}')
         age = calc_price()
