@@ -56,7 +56,7 @@ def summary_to_pay():
             y += 1
         line = '-'
         locate(0,5)
-        Print(line * 43)
+        Print(line * 48)
         locate(0,6)
         Print(f'TOTAL: €{total:05.2f}')
         age = calc_price()
