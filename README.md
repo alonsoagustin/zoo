@@ -44,23 +44,29 @@ Introduce, una a una, la edad de las personas que deseen ingresar al ZOO.
 ### Input
 
 ```cmd
-Ingrese una edad: 74
-Ingrese una edad: 2
-Ingrese una edad: 67
-Ingrese una edad: 35
-Ingrese una edad: 33
-Ingrese una edad:
+ RESUMEN DE COMPRA
+ Bebés............... 00.00 ..... 00 ..... €00.00
+ Niños............... 14.00 ..... 00 ..... €00.00
+ Adultos............. 23.00 ..... 00 ..... €00.00
+ Jubilados........... 18.00 ..... 00 ..... €00.00
+ ------------------------------------------------
+ TOTAL: €00.00
+
+ Ingrese una edad: 33
 ```
 
 ### Output
 
 ```cmd
-01 entradas de Bebés...............: $00.00
-00 entradas de Niños...............: $00.00
-02 entradas de Adultos.............: $46.00
-02 entradas de Jubilados...........: $36.00
--------------------------------------------
-TOTAL: $82.00
+ RESUMEN DE COMPRA
+ Bebés............... 00.00 ..... 00 ..... €00.00
+ Niños............... 14.00 ..... 00 ..... €00.00
+ Adultos............. 23.00 ..... 01 ..... €23.00
+ Jubilados........... 18.00 ..... 00 ..... €00.00
+ ------------------------------------------------
+ TOTAL: €23.00
+
+ Ingrese una edad:
 ```
 
 ## Contribuciones

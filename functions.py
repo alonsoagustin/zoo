@@ -1,12 +1,18 @@
 from variables import price_list, total
+from simple_screen import cls, Print, locate, Input
 
 def request_age():
     while True:
-        try:
-            user_response = input("Ingrese una edad: ")
+        try: 
+            locate(0,8)
+            user_response = Input("Ingrese una edad: ")
             if user_response == "":
+                user_response = "Saliendo del programa"
+                locate(0,8)
+                Print(user_response)
                 return False
             else:
+                cls()
                 return is_valid(user_response)
         except Exception as e:
             print(f" Error inesperado: {e}")
@@ -30,15 +36,28 @@ def calc_price():
                 value['contador'] += 1
                 total += value['precio']
                 break
-        age = request_age()
-    return summary_to_pay(price_list)
+        break
+    return age
 
-def summary_to_pay(price_list:dict):
-    global total
-    for key, value in price_list.items():
-        subtotal = value['contador'] * value['precio']
-        string = f'{value['contador']:02d} entradas de {key:.<20s}: ${subtotal:05.2f}'
-        print(string)
-    line = '-'
-    print(line * 43)
-    print(f'TOTAL: ${total:.2f}')
+def summary_to_pay():
+    global total, price_list
+    cls()
+    age = True
+    while age:
+        y = 1
+        line = '-'
+        title = "   TIPO              PRECIO       N°       TOTAL" 
+        locate(0,0)
+        Print(title)
+        for key, value in price_list.items():
+            subtotal = value['contador'] * value['precio']
+            string = f'{key:.<20s} €{value['precio']:05.2f} ..... {value['contador']:02d} ..... €{subtotal:05.2f}'
+            locate(0,y)
+            Print(string)
+            y += 1
+        line = '-'
+        locate(0,5)
+        Print(line * 49)
+        locate(0,6)
+        Print(f'TOTAL: €{total:05.2f}')
+        age = calc_price()
